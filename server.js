@@ -10,7 +10,7 @@ let connectionString = 'mongodb+srv://student_user:MsbGbldBfYaPnH3Q@cluster0.smb
 
 mongodb.connect(connectionString, {useNewUrlParser: true, useUnifiedTopology: true}, function(err, client){
     db = client.db()
-    app.listen(3000)
+    app.listen(process.env.PORT || 3000)
 })
 
 app.use(express.json())
